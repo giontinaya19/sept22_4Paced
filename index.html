@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Message Storage</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+width: 650px;
+margin: 50px auto;
+}
+.blockchain-data {
+background: #eeeeee;
+padding: 20px;
+margin-bottom: 30px;
+}
+input {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+}
+button {
+padding: 10px 20px;
+}
+</style>
+</head>
+<body>
+<h1>Message Storage</h1>
+<p>Ethereum Sepolia Smart Contract</p>
+<div class="blockchain-data">
+<h2>Blockchain Data</h2>
+<p><strong>Current Message:</strong> {{ message }}</p>
+<p><strong>Contract Owner:</strong> {{ owner }}</p>
+<p><strong>Flask Wallet:</strong> {{ wallet }}</p>
+</div>
+<h2>Change Message</h2>
+<form action="/set-message" method="POST">
+<label>New Message</label>
+<input type="text" name="message" required>
+<button type="submit">Save to Blockchain</button>
+</form>
+</body>
+</html>
